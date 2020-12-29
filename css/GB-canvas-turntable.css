@@ -1,0 +1,147 @@
+/* DaTouWang URL: www.datouwang.com */
+.gb-turntable ul,
+.gb-turntable li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 0.4rem;
+}
+
+.gb-turntable {
+  position: relative;
+  top: 3.2rem;
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  border: 0.9rem solid #FFA700;
+  /* @see http://lea.verou.me/css3patterns/*/
+  /* border: 16px solid transparent;
+  background:
+    radial-gradient(#FFA767 15%, transparent 16%) 0 0,
+    radial-gradient(#FFA767 15%, transparent 16%) 8px 8px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+    radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+    background-color:#E44025;
+    background-size:16px 16px; */
+  box-shadow: 0 2px 3px #333, 0 0 2px #000; }
+
+.gb-turntable-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+  background-clip: padding-box;
+  background-color: #ffcb3f;
+  -webkit-transition: transform 6s ease;
+  transition: transform 6s ease; }
+
+.gb-turntable-container canvas {
+  width: inherit;
+  height: inherit;
+  border-radius: 50%; }
+
+.gb-turntalbe-list {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: inherit;
+  height: inherit;
+  z-index: 2; }
+
+.gb-turntable-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: #7B3703;
+  font-weight: bold;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6); }
+
+.gb-turntable-item p {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  margin: 0 auto;
+  text-align: center;
+  -webkit-transform-origin: 50% 150px;
+  -ms-transform-origin: 50% 150px;
+  transform-origin: 50% 150px; }
+.gb-turntable-item p span {
+  display: block;
+}
+.gb-turntable-item img {
+  width: 50px;
+  height: 50px; }
+
+.gb-turntable-btn {
+  position: absolute;
+  left: 4.2rem;
+  top: 4rem;
+  z-index: 3;
+  width: 5rem;
+  height: 5rem;
+  /* line-height: 4.5rem; */
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FFFFFF;
+  letter-spacing: 3px;
+  text-decoration: none;
+}
+.light-bulb {
+  width: 112%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: -6%;
+  background: url(../image/light-bulb.png) no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: transform 6s ease;
+  transition: transform 6s ease;
+}
+.start-btn {
+  background: url('../image/start.png') no-repeat;
+  background-size: 100% 100%;
+}
+.gb-turntable-btn span {
+  width: 100%;
+  display: inline-block;
+}
+.prizes-count {
+  display: inline-block;
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  color: #FFD600;
+  letter-spacing: 0;
+}
+/* .gb-turntable-btn::after {
+  position: absolute;
+  display: block;
+  content: '';
+  left: 10px;
+  top: -46px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  border-width: 30px;
+  border-style: solid;
+  border-color: transparent;
+  border-bottom-color: #E44025; } */
+
+.gb-turntable-btn.disabled {
+  pointer-events: none;
+  background: url('../image/start-focus.png') no-repeat;
+  background-size: 100% 100%;
+}
+
+.gb-turntable-btn.disabled::after {
+  border-bottom-color: #B07A7B; }
+
+.gb-run {
+  -webkit-transition: all 6s ease;
+  transition: all 6s ease; }
+
+/*# sourceMappingURL=GB-canvas-turntable.css.map */
