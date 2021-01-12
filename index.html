@@ -1,140 +1,116 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>大转盘</title>
-	<link rel="stylesheet" href="css/GB-canvas-turntable.css">
-	<link rel="stylesheet" type="text/css" href="css/hlhs.css">
-</head>
-<body>
-
-<img class="bg" src="./image/bg.png" alt="">
-
-<div class="zhuanp" id="turntable" style="display: none;">
-	<section>
-		 <ul id="prizes-user-list">
-	        <li>安以陌 抽中iPhone11碎片*1</li>
-	        <li>基霸 抽中iPhone11碎片*1</li>
-	        <li>﹏唯唯诺诺、 抽中iPhone11碎片*0.5</li>
-	        <li>效仿孤单@ 抽中华为电视碎片*1</li>
-	        <li>洞房不败 抽中iPhone11碎片*1</li>
-	        <li>丨丶可樂灬 抽中华为手机碎片*0.5</li>
-	        <li>爱情并不甜 抽中iPhone11碎片*1</li>
-	        <li>情歌年少 抽中华为手机碎片*1</li>
-	        <li>比蒙牛還純。 抽中iPhone11碎片*1</li>
-	        <li>一生中最爱 抽中iPhone11碎片*0.5</li>
-	        <li>一生感情路 抽中华为电视碎片*0.5</li>
-	        <li>文字拾荒者 抽中iPhone11碎片*1</li>
-	        <li>沧桑的回忆゛ 抽中华为手机碎片*1</li>
-	        <li>remember 抽中华为手机碎片*0.5</li>
-	        <li>毁灭爱情 抽中iPhone11碎片*0.5</li>
-	        <li>临渊羡鱼 抽中iPhone11碎片*1</li>
-	        <li>拥慌ill 抽中华为手机碎片*1</li>
-	        <li>文艺小青年 抽中华为手机碎片*1</li>
-	        <li>分身情人i 抽中华为电视碎片*1</li>
-	    </ul>
-	</section>
-	<section id="turntable" class="gb-turntable">
-		<div class="gb-turntable-container">
-			<canvas class="gb-turntable-canvas" width="300" height="300px">抱歉！浏览器不支持。</canvas>
+﻿<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no"/>
+    <title>大转盘</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script src="//s.opfed.com/lib/zepto/1.2.0/zepto.min.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="container">
+    <div class="lucky-wheel">
+    	<div class="top-box">
+			<ul id="prizes-user-list">
+		        <li>安以陌 抽中iPhone11碎片*1</li>
+		        <li>基霸 抽中iPhone11碎片*1</li>
+		        <li>﹏唯唯诺诺、 抽中iPhone11碎片*0.5</li>
+		        <li>效仿孤单@ 抽中华为电视碎片*1</li>
+		        <li>洞房不败 抽中iPhone11碎片*1</li>
+		        <li>丨丶可樂灬 抽中华为手机碎片*0.5</li>
+		        <li>爱情并不甜 抽中iPhone11碎片*1</li>
+		        <li>情歌年少 抽中华为手机碎片*1</li>
+		        <li>比蒙牛還純。 抽中iPhone11碎片*1</li>
+		        <li>一生中最爱 抽中iPhone11碎片*0.5</li>
+		        <li>一生感情路 抽中华为电视碎片*0.5</li>
+		        <li>文字拾荒者 抽中iPhone11碎片*1</li>
+		        <li>沧桑的回忆゛ 抽中华为手机碎片*1</li>
+		        <li>remember 抽中华为手机碎片*0.5</li>
+		        <li>毁灭爱情 抽中iPhone11碎片*0.5</li>
+		        <li>临渊羡鱼 抽中iPhone11碎片*1</li>
+		        <li>拥慌ill 抽中华为手机碎片*1</li>
+		        <li>文艺小青年 抽中华为手机碎片*1</li>
+		        <li>分身情人i 抽中华为电视碎片*1</li>
+		    </ul>
+		    <p class="rule"><a href="./rule.html">活动规则</a></p>
 		</div>
-		<div class="light-bulb" id="lightBulb"></div>
-		<a class="gb-turntable-btn start-btn" href="javascript:;">
-			<p style="margin-top: 1.7rem;">抽奖</p><p class="prizes-count" id="prizesCount"></p>
-		</a>
-	</section>
-	<section class="prizes">
-		<img class="my-prizes" src="./image/prize.png">
-		<div>
-			<p><img style="width: 2.5rem; height: 3rem;" src="./image/prize-iphone.png"></p>
-			<p class="title">iPhone</p>
-			<p class="schedule"><img class="icon" src="./image/iPhone.png"><span class="total"></span><span class="num" id="iPhoneNum"></span></p>
-			<p class="exchange">兑换</p>
-		</div>
-		<div>
-			<p><img style="width: 2.8rem; height: 3rem;" src="./image/prize-huawei.png"></p>
-			<p class="title">华为P40</p>
-			<p class="schedule"><img class="icon" src="./image/huawei.png"><span class="total"></span><span class="num" id="huaweiNum"></span></p>
-			<p class="exchange">兑换</p>
-		</div>
-		<div>
-			<p><img style="width: 4rem; height: 3rem;" src="./image/prize-tv.png"></p>
-			<p class="title">华为电视 55寸</p>
-			<p class="schedule"><img class="icon" src="./image/tv.png"><span class="total"></span><span class="num" id="tvNum"></span></p>
-			<p class="exchange">兑换</p>
-		</div>
-	</section>
-</div>
+  		<div class="wheel-main">
+  		    <!-- <div class="wheel-pointer" @click="beginRotate()"></div> -->
+  		    <div class="wheel-pointer" id="turntableBtn">
+  		    	<div style="margin: 0 auto;">
+  		    		<p class="prizes-btntext">抽奖</p><p class="prizes-count"><span id="prizesCount"></span>次</p>
+  		    	</div>
+  		    </div>
 
-<script src="js/GB-canvas-turntable.js"></script>
-<script src="//s.opfed.com/lib/zepto/1.2.0/zepto.min.js" type="text/javascript"></script>
-<script>
-	window.onload = function(){
-	    (function(win, doc){
-	        //浏览器缩放时
-	        win.onresize = function(){
-	            change();
-	        };
-	        change();
-	        function change(){
-	            var oFs = doc.documentElement.clientWidth / ( 320 / 20);
-	            //设置根目录字体大小
-	            doc.documentElement.style.fontSize = oFs +'px';
-	        }
-	    })(window, document);
-	}
+  		    <div class="light-box"></div>
+  		    <div class="wheel-bg" id="wheelBg">
+  		      <div class="light-bulb"></div>
+  		      <div class="prize-list" id="prizeList"></div>
+  		    </div>
+  		  </div>
+  		</div>
+	  		<div class="main">
+	  		  <section class="prizes">
+					<img class="my-prizes" src="./image/prize.png">
+					<div>
+						<p><img style="width: 2.5rem; height: 3rem;" src="./image/prize-iphone.png"></p>
+						<p class="title">iPhone</p>
+						<p class="schedule"><img class="icon" src="./image/iPhone.png"><span class="total"></span><span class="num" id="iPhoneNum"></span></p>
+						<p class="exchange">兑换</p>
+					</div>
+					<div>
+						<p><img style="width: 2.8rem; height: 3rem;" src="./image/prize-huawei.png"></p>
+						<p class="title">华为P40</p>
+						<p class="schedule"><img class="icon" src="./image/huawei.png"><span class="total"></span><span class="num" id="huaweiNum"></span></p>
+						<p class="exchange">兑换</p>
+					</div>
+					<div>
+						<p><img style="width: 4rem; height: 3rem;" src="./image/prize-tv.png"></p>
+						<p class="title">华为电视 55寸</p>
+						<p class="schedule"><img class="icon" src="./image/tv.png"><span class="total"></span><span class="num" id="tvNum"></span></p>
+						<p class="exchange">兑换</p>
+					</div>
+				</section>
+	  		</div>
+	  		<div class="toast" id="toast" style="display:none;">
+	  		  <div class="toast-container">
+	  		    <div class="toast-title" id="toastTitle"></div>
+	  		    <div class="toast-btn">
+	  		      <div class="toast-cancel" id="close">关闭</div>
+	  		    </div>
+	  		  </div>
+	  		</div>
+	  		<div class="toast-mask" id="toastMask" style="display:none;"></div>
+  		</div>
 
-	function customScroll(id, delay = 20) {
-        if (!id) {
-            throw new Error("选择器不存在");
-        }
+    <script>
+    	function getQueryVariable(variable)  {
+		    var query = window.location.search.substring(1);
+		    var vars = query.split("&");
+		    for (var i=0;i<vars.length;i++) {
+		        var pair = vars[i].split("=");
+		        if(pair[0] == variable){return pair[1];}
+		    }
+		    return(false);
+		}
 
-        var timer = null;
-
-        var _elem = document.getElementById(id);
-
-        var c = function(){
-            if (timer) {
-                clearInterval(timer);
-            }
-            _elem.onmouseover = function () {
-                clearInterval(timer);
-            }
-            _elem.onmouseout = function () {
-                c();
-            }
-
-            if (_elem.scrollHeight >= _elem.offsetHeight) {
-                timer = setInterval(() => {
-                    if(_elem.scrollTop >= _elem.scrollHeight){
-                        _elem.scrollTop = 0;
-                    } else {
-                        if (_elem.scrollTop >= _elem.children[0].offsetHeight) {
-                            _elem.append(_elem.children[0]);
-                        }
-                        _elem.scrollTop++;
-                    }
-                }, delay);
-            }
-        }
-        return c;
-    }
-
-	function getQueryVariable(variable)  {
-	    var query = window.location.search.substring(1);
-	    var vars = query.split("&");
-	    for (var i=0;i<vars.length;i++) {
-	        var pair = vars[i].split("=");
-	        if(pair[0] == variable){return pair[1];}
+		function initCount(count) {
+	    	if(count == 0) {
+	    		turntable.isGoing = true;
+	    		$("#turntableBtn").removeClass("wheel-pointer");
+	    		$("#turntableBtn").addClass("no-count");
+	    		$(".prizes-count").css({ display: "none"});
+	    		$(".prizes-btntext").css({ margin: "0 auto", width: "50%"});
+	    		$(".prizes-btntext").html('增加次数');
+	    		$(".prizes-btntext").click(function() {
+	    			OupengJsInterface.earnPlayTimes('115');
+	    		});
+	    	} else {
+		      	document.getElementById('prizesCount').innerHTML = count;
+	    	}
 	    }
-	    return(false);
-	}
-  	var token = decodeURIComponent(getQueryVariable('token'));
-  	var bid = '';
-  	var prizeUserListcallback = customScroll('prizes-user-list');
-  	var prizeIndex = '';
-  	var iconList = [{id: "9ef8e0d5fa0648b7bd6577cf956d0d41", icon: "./image/welecome.png"},
+
+		var iconList = [{id: "9ef8e0d5fa0648b7bd6577cf956d0d41", icon: "./image/welecome.png"},
 					{id: "5da46a2319a34fe2bc9e33d05032f767", icon: "./image/gift.png"},
 					{id: "e97502082c9843e1a324b12a368dec42", icon: "./image/iPhone.png"},
 					{id: "ddad1a7b0ea74ef28d0faa7652135504", icon: "./image/iPhone.png"},
@@ -142,159 +118,331 @@
 					{id: "f9652e7c564447599b6aa1ed1346642c", icon: "./image/huawei.png"},
 					{id: "66a0ceb4be994f5191f0eddb2b623421", icon: "./image/tv.png"},
 					{id: "4f50198076b94e77b2160eb3e943ab7e", icon: "./image/coupon.png"}];
+    	var token = decodeURIComponent(getQueryVariable('token'));
+    	var prizesList = document.getElementById("prizeList");
+    	var wheelBg = document.querySelector("#wheelBg");
+    	var CIRCLE_ANGLE = 360;
+  		var bid = '';
 
-	function getPrizeIndex(data, prizesId) {
-		var itemIndex = {};
-		data.forEach((item, index) => {
-			if(item.prizeType === prizesId) {
-				itemIndex = index;
-			}
-		});
-		return itemIndex;
-	}
+	    // 单例模式，转盘唯一，用对象字面量方式表示
+	    var turntable = {
+	    	turntableList: [],
+	        isGoing: false, // 游戏是否开始
+	        count: 0, // 剩余抽奖次数
+		    duration: 3000, // 转盘旋转时间
+		    rotateAngle: 0, // 旋转角度
+		    index: 0,
+		    prize: null,
+		    isRotating: false,
+	        config: {
+			  // 总旋转时间
+			  duration: 4000,
+			  // 旋转圈数
+			  circle: 8,
+			  mode: 'ease-in-out'
+			},
 
-	document.addEventListener('DOMContentLoaded', function () {
-		$.ajax({
-	        type:'POST',
-	        url: 'http://wz.oupeng.com/coin/block/list',
-	        headers: {
-	          "X-Security-Token": token
+	        // 格式化奖品列表，计算每个奖品的位置
+		    formatPrizeList (list) {
+		      // 记录每个奖的位置
+		      const angleList = [];
+
+		      const l = list.length;
+		      // 计算单个奖项所占的角度
+		      const average = CIRCLE_ANGLE / l;
+
+		      const half = average / 2;
+
+		      // 循环计算给每个奖项添加style属性
+		      list.forEach((item, i) => {
+
+		        // 每个奖项旋转的位置为 当前 i * 平均值 + 平均值 / 2
+		        const angle = -((i * average) + half);
+		        // 增加 style
+		        item.style = `-webkit-transform: rotate(${angle}deg);
+		                      transform: rotate(${angle}deg);`
+
+		        // 记录每个奖项的角度范围
+		        angleList.push((i * average) + half );
+		      });
+
+		      this.angleList = angleList;
+		      return list;
+		    },
+
+		    rotateStyle () {
+		      return `
+		        -webkit-transition: transform ${this.config.duration}ms ${this.config.mode};
+		        transition: transform ${this.config.duration}ms ${this.config.mode};
+		        -webkit-transform: rotate(${this.rotateAngle}deg);
+		            transform: rotate(${this.rotateAngle}deg);`
+		    },
+
+	        init () {
+	          for(var i = 0; i < turntableList.length; i ++) {
+	          	var prizeItem = document.createElement("div");
+	          	var prizeText = document.createElement("div");
+	          	var prizeImage = document.createElement("img");
+            	prizeItem.className = 'prize-item';
+            	prizeItem.style = turntableList[i].style;
+            	prizeImage.className = 'prize-pic';
+            	prizeImage.src = turntableList[i].img;
+            	prizeText.className = 'prize-type';
+            	prizeText.innerHTML = turntableList[i].blockName;
+
+            	prizeItem.appendChild(prizeText);
+            	prizeItem.appendChild(prizeImage);
+            	prizesList.appendChild(prizeItem);
+	          }
+
+	          // 给点击抽奖按钮添加点击事件
+	          document.querySelector("#turntableBtn").onclick = this.gameStart.bind(this)
 	        },
-	        timeout: 3000,
-	        success: function (res) {
-	          if(res.code === 0) {
-	            var data = res.data;
-	            var blockList = data.blockList;
-	            blockList.forEach((item, index) => {
-	            	if(item.id = iconList[index].id) {
-	            		item.img = iconList[index].icon;
-	            	}
-	            })
-	          	document.getElementById('turntable').style.display = 'block';
-	          	document.getElementById('prizesCount').innerHTML = data.prizeCount+'次';
-	            gbTurntable.init({
-					id: 'turntable',
-					config: function (callback) {
-						// 获取奖品信息
-						callback && callback(blockList);
-					},
-					getPrize: function (callback) {
-						// 获取中奖信息
-						$.ajax({
-							type:'POST',
-							url: 'http://wz.oupeng.com/coin/drawphone',
-							headers: {
-							  "X-Security-Token": token
-							},
-							timeout: 3000,
-							success: function (res) {
-							  if(res.code === 0) {
-							    var data = res.data;
-							    bid = data.bid;
-							    var n = [1, 2, 6];
-							    if(n.indexOf(data.prizeType) == -1) {//抽中手机在请求api
-							    	$.ajax({
-										type:'POST',
-										url: 'http://wz.oupeng.com/coin/query/drawphone',
-										contentType: 'application/json; charset=utf-8',
-										data: JSON.stringify({"bid": bid}),
-										headers: {
-										  "X-Security-Token": token
-										},
-										timeout: 3000,
-										success: function (res) {
-										  if(res.code === 0) {
-										    var item = JSON.parse(res.data);
-										  	prizeIndex = getPrizeIndex(blockList, item.prizeType);
-											callback && callback([prizeIndex, data.prizeCount]);
-										  }
-										},
-										error: function () {
-										  alert('中奖列表api请求失败');
-										}
-									});
-							    } else {
-							    	prizeIndex = getPrizeIndex(blockList, data.prizeType);
-									callback && callback([prizeIndex, data.prizeCount]);
-							    }
-							  } else {
-							  	alert(res.msg);
-							  }
-							},
-							error: function () {
-							  alert('中奖列表api请求失败');
-							}
-						});
-					},
-					gotBack: function (data) {
-						var coinIdList = [1, 2, 6];
-						if(coinIdList.indexOf(data.prizeType) == -1) {
-							OupengJsInterface.showAwardDialog('115', true, data.coinAmount);
-						} else {
-							OupengJsInterface.showAwardDialog('115', false, data.blockName);
-						}
+
+	      	rotateOver (data) {
+		        this.isRotating = false
+		        this.prize = null;
+		        this.prize = turntableList[this.index];
+
+		      	var n = [3, 4, 5, 6];
+				if(n.indexOf(data.prizeType) > -1) {
+					console.log(data.blockName);
+					OupengJsInterface.showAwardDialog('115', false, data.blockName);
+				} else if(this.prize.prizeType != 1) {
+					console.log(data.coinAmount);
+					OupengJsInterface.showAwardDialog('115', true, data.coinAmount);
+				}
+		    },
+
+	      	rotating(data) {
+		      const { isRotating, angleList, config, rotateAngle, index } = this
+
+		      if (isRotating) return
+
+		      this.isRotating = true
+		      // 计算角度
+		      const angle =
+		          // 初始角度
+		          rotateAngle +
+		          // 多旋转的圈数
+		          config.circle * CIRCLE_ANGLE +
+		          // 奖项的角度
+		          angleList[index] -
+		          (rotateAngle % CIRCLE_ANGLE)
+
+		        this.rotateAngle = angle;
+		        wheelBg.style = this.rotateStyle();
+		        // 旋转结束后，允许再次触发
+		        setTimeout(() => {
+
+		          this.rotateOver(data)
+		        }, config.duration + 1000)
+		    },
+
+	        gameStart () {
+	            if (this.isGoing) {
+	             	return;
+	          	}
+	          	this.isGoing = true;
+	          	this.getPrizeInfo();
+	      	},
+
+	      	getPrizeIndex(data, prizesId) {
+				var itemIndex = {};
+				data.forEach((item, index) => {
+					if(item.prizeType === prizesId) {
+						itemIndex = index;
 					}
 				});
-	          } else {
-	          	alert(res.msg);
-	          }
-	        },
-	        error: function () {
-	          alert('奖品列表api请求失败');
-	        }
-	    });
-	}, false);
+				return itemIndex;
+			},
 
-	prizeUserListcallback();
-	function initPrize() {
+	      	getPrizeInfo() {
+	      		var _this = this;
+	      		$.ajax({
+					type:'POST',
+					url: 'http://wz.oupeng.com/coin/drawphone',
+					headers: {
+					  "X-Security-Token": token
+					},
+					timeout: 3000,
+					success: function (res) {
+					  if(res.code === 0) {
+					    var data = res.data;
+					    bid = data.bid;
+					    var n = [3, 4, 5, 6];
+					    if(n.indexOf(data.prizeType) > -1) {
+					    	$.ajax({
+								type:'POST',
+								url: 'http://wz.oupeng.com/coin/query/drawphone',
+								contentType: 'application/json; charset=utf-8',
+								data: JSON.stringify({"bid": bid}),
+								headers: {
+								  "X-Security-Token": token
+								},
+								timeout: 3000,
+								success: function (res) {
+								  if(res.code === 0) {
+								    var item = JSON.parse(res.data);
+								  	_this.index = _this.getPrizeIndex(turntableList, item.prizeType);
+								    // 开始旋转
+						    		_this.rotating(item);
+								  }
+								},
+								error: function () {
+								  alert('中奖列表api请求失败');
+								}
+							});
+					    } else {
+					    	_this.index = _this.getPrizeIndex(turntableList, data.prizeType);
+						    // 开始旋转
+				    		_this.rotating(data);
+					    }
+					    var countNum = parseInt(document.getElementById('prizesCount').innerHTML) - 1;
+					    initCount(countNum);
+					    if(countNum > 0) {
+					    	setTimeout(() => {
+					    		_this.isGoing = false;
+					        }, _this.config.duration + 1000);
+					    }
+					  } else {
+					  	alert(res.msg);
+					  }
+					},
+					error: function () {
+					  alert('中奖列表api请求失败');
+					}
+				});
+	      	},
+
+	    }
+
+	    function customScroll(id, delay = 20) {
+	        if (!id) {
+	            throw new Error("选择器不存在");
+	        }
+
+	        var timer = null;
+
+	        var _elem = document.getElementById(id);
+
+	        var c = function(){
+	            if (timer) {
+	                clearInterval(timer);
+	            }
+	            _elem.onmouseover = function () {
+	                clearInterval(timer);
+	            }
+	            _elem.onmouseout = function () {
+	                c();
+	            }
+
+	            if (_elem.scrollHeight >= _elem.offsetHeight) {
+	                timer = setInterval(() => {
+	                    if(_elem.scrollTop >= _elem.scrollHeight){
+	                        _elem.scrollTop = 0;
+	                    } else {
+	                        if (_elem.scrollTop >= _elem.children[0].offsetHeight) {
+	                            _elem.append(_elem.children[0]);
+	                        }
+	                        _elem.scrollTop++;
+	                    }
+	                }, delay);
+	            }
+	        }
+	        return c;
+	    }
+
+	    turntable.turntable = document.querySelector('#turntable');
+	    var prizeUserListcallback = customScroll('prizes-user-list');
+
+		$.ajax({
+		    type:'POST',
+		    url: 'http://wz.oupeng.com/coin/block/list',
+		    headers: {
+		      "X-Security-Token": token
+		    },
+		    timeout: 3000,
+		    success: function (res) {
+		      if(res.code === 0) {
+		        var data = res.data;
+		        var blockList = data.blockList;
+		        blockList.forEach((item, index) => {
+		        	if(item.id = iconList[index].id) {
+		        		item.img = iconList[index].icon;
+		        	}
+		        });
+		        turntableList = blockList;
+		        this.
+				turntable.formatPrizeList(turntableList);
+				turntable.init();
+				prizeUserListcallback();
+				this.count = data.prizeCount;
+
+	    		initCount(this.count);
+		      } else {
+		      	alert(res.msg);
+		      }
+		    },
+		    error: function () {
+		      alert('奖品列表api请求失败');
+		    }
+		});
+
 		$.ajax({
 			type:'POST',
-			url: 'http://wz.oupeng.com/coin/block/list',
+			url: 'http://wz.oupeng.com/coin/drawphone/list',
 			headers: {
 			  "X-Security-Token": token
 			},
 			timeout: 3000,
 			success: function (res) {
 			  if(res.code === 0) {
-			    var itemData = res.data;
-	          	document.getElementById('prizesCount').innerHTML = itemData.prizeCount+'次';
+			    var dataItem = res.data;
+			    dataItem.forEach((item, index) => {
+			    	if(item.prizeName == 'iPhone碎片') {
+			    		document.getElementById('iPhoneNum').innerHTML = item.blockCount +'/'+item.blockTotal;
+			    	}
+			    	if(item.prizeName == '华为P40碎片') {
+			    		document.getElementById('huaweiNum').innerHTML = item.blockCount +'/'+item.blockTotal;
+			    	}
+			    	if(item.prizeName == '华为电视') {
+			    		document.getElementById('tvNum').innerHTML = item.blockCount +'/'+item.blockTotal;
+			    	}
+			    });
 			  }
 			},
 			error: function () {
 			  alert('中奖列表api请求失败');
 			}
 		});
-	}
 
-	$.ajax({
-		type:'POST',
-		url: 'http://wz.oupeng.com/coin/drawphone/list',
-		headers: {
-		  "X-Security-Token": token
-		},
-		timeout: 3000,
-		success: function (res) {
-		  if(res.code === 0) {
-		    var dataItem = res.data;
-		    dataItem.forEach((item, index) => {
-		    	if(item.prizeName == 'iPhone碎片') {
-		    		document.getElementById('iPhoneNum').innerHTML = item.blockCount +'/'+item.blockTotal;
-		    	}
-		    	if(item.prizeName == '华为P40碎片') {
-		    		document.getElementById('huaweiNum').innerHTML = item.blockCount +'/'+item.blockTotal;
-		    	}
-		    	if(item.prizeName == '华为电视') {
-		    		document.getElementById('tvNum').innerHTML = item.blockCount +'/'+item.blockTotal;
-		    	}
-		    });
-		  }
-		},
-		error: function () {
-		  alert('中奖列表api请求失败');
+		document.querySelectorAll('.exchange').forEach((item, index) => {
+			item.onclick = function() {
+				document.querySelector("#toastMask").style.display = 'block';
+				document.querySelector("#toast").style.display = 'block';
+				document.querySelector("#toastTitle").innerHTML = '碎片或提货券还未集齐，集齐后再来兑换哦~';
+				document.querySelector("#close").onclick = function () {
+					document.querySelector("#toastMask").style.display = 'none';
+					document.querySelector("#toast").style.display = 'none';
+					document.querySelector("#toastTitle").innerHTML = '';
+				}
+			}
+		});
+		window.onload = function(){
+		    (function(win, doc){
+		        //浏览器缩放时
+		        win.onresize = function(){
+		            change();
+		        };
+		        change();
+		        function change(){
+		            var oFs = doc.documentElement.clientWidth / ( 320 / 20);
+		            //设置根目录字体大小
+		            doc.documentElement.style.fontSize = oFs +'px';
+		        }
+		    })(window, document);
 		}
-	});
-
-</script>
-
-</body>
+    </script>
+  </body>
 </html>

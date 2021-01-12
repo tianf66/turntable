@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+    background-color: #4A1AEB;
+}
+html, body {
+  height: 100%;
+}
+.container {
+  width: 100%;
+}
+.lucky-wheel {
+  width: 100%;
+  height: 20rem;
+  background: url("../image/bg.png") no-repeat;
+  background-size: 100%;
+}
+.wheel-main {
+  margin: 2rem auto 0;
+  position: relative;
+  width: 295px;
+  height: 295px;
+}
+.light-bulb {
+  width: 112%;
+  height: 110%;
+  position: absolute;
+  top: -5%;
+  left: -6%;
+  background: url(../image/light-bulb.png) no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: transform 6s ease;
+  transition: transform 6s ease;
+}
+.light-box {
+  width: 128%;
+  height: 123%;
+  position: absolute;
+  top: -12%;
+  left: -14%;
+  background: url(../image/bg-box.png) no-repeat;
+  background-size: 100% 100%;
+  -webkit-transition: transform 6s ease;
+  transition: transform 6s ease;
+}
+#prizes-user-list {
+    margin-left: 0.5rem;
+    list-style: none;
+    height: 20px;
+    overflow: hidden;
+    opacity: 0.7;
+    font-family: PingFangSC-Medium;
+    font-size: 9px;
+    text-align: center;
+    color: #E7DDFF;
+    background: #6B38E0;
+    border-radius: 100px;
+}
+#prizes-user-list ul li {
+    text-align: center;
+    height: 100%;
+    padding: 30px 0;
+    font-size: 0.5rem;
+}
+.prizes-count {
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  color: #FFD600;
+  letter-spacing: 0;
+}
+.prizes-btntext {
+  width: 100%;
+  margin-top: 0.7rem;
+  text-align: center;
+  font-family: PingFangSC-Medium;
+  font-size: 0.7rem;
+  color: rgb(255 255 255);
+  letter-spacing: 3px;
+}
+.prizes {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background: #FFFFFF;
+    border-radius: 13px;
+    margin-top: 0.5rem;
+}
+.my-prizes {
+    width: 180px;
+    height: 40px;
+    position: absolute;
+    top: -0.65rem;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.prizes div {
+    width: 33%;
+    text-align: center;
+    padding-top: 2rem;
+}
+.prizes .title {
+    font-family: PingFangHK-Regular;
+    font-size: 0.5rem;
+    color: #333333;
+    letter-spacing: 0;
+}
+.prizes .schedule .icon {
+    width: 0.6rem;
+    height: 0.6rem;
+}
+.prizes .schedule {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.prizes .schedule .total {
+    display: inline-block;
+    width: 2.7rem;
+    height: 0.2rem;
+    background-image: linear-gradient(#FF5855 7%, #FFA281 95%);
+    border-radius: 100px;
+}
+.prizes .schedule .num {
+    font-family: PingFangHK-Regular;
+    font-size: 0.5rem;
+    color: #FF4036;
+    letter-spacing: 0;
+    line-height: 0.22rem;
+    padding-left: 0.1rem;
+}
+.prizes .exchange {
+    width: 2rem;
+    height: 0.7rem;
+    line-height: 0.7rem;
+    margin: 0.5rem auto;
+    font-size: 0.5rem;
+    color: #FF4036;
+    border: 1px solid #FF4036;
+    border-radius: 100px;
+}
+
+.prizes .prize-img {
+    display: inline-block;
+}
+.wheel-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: url("../image/turnable-bg.png") no-repeat center top;
+  background-size: 100%;
+  color: #fff;
+}
+.wheel-pointer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background: url("../image/start.png") no-repeat center top;
+  background-size: 100%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.no-count {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 2;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  background: url("../image/no-count.png") no-repeat center top;
+  background-size: 100%;
+  transform: translate3d(-50%, -50%, 0);
+}
+.wheel-bg div {
+  text-align: center;
+}
+.prize-list {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.prize-list .prize-item {
+  position: absolute;
+  width: 95px;
+  height: 150px;
+  top: 0;
+  left: 50%;
+  margin-left: -47.5px;
+  transform-origin: 50% 100%;
+}
+
+.prize-pic {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-top: 0.5rem;
+}
+.prize-count {
+  font-size: 0.875rem;
+}
+.prize-type {
+  font-family: Arial-BoldMT;
+  color: #7B3703;
+  letter-spacing: 0;
+  margin-top: 1rem;
+  font-size: 0.35rem;
+}
+.main {
+  position: relative;
+  width: 100%;
+  padding-bottom: 1.6875rem;
+}
+.main-bg {
+  width: 100%;
+  height: 6.5625rem;
+  position: absolute;
+  top: -3.4375rem;
+  left: 0;
+  background: url("../image/turnable-bg.png") no-repeat center top;
+  background-size: 100%;
+}
+.bg-p {
+  width: 100%;
+  height: 2.95rem;
+  background: rgb(252, 207, 133);
+}
+.content {
+  position: absolute;
+  top: 0.175rem;
+  left: 0;
+  background: rgb(243, 109, 86);
+  width: 100%;
+  height: 5.1875rem;
+  font-size: 1.125rem;
+  color: #ffeb39;
+  padding-left: 6.75rem;
+}
+.content div {
+  text-align: left;
+}
+.tip {
+  position: relative;
+  margin: 2.5rem auto 0;
+  width: 17.5rem;
+  border: 1px solid #fbc27f;
+}
+.tip-title {
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 1rem;
+  color: #fccc6e;
+  background: rgb(243, 109, 86);
+  padding: 0.3125rem 0.625rem;
+}
+.tip-content {
+  padding: 1.5625rem 0.625rem;
+  font-size: 0.875rem;
+  color: #fff8c5;
+  line-height: 1.5;
+}
+.toast-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+}
+.toast {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 20000;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  background: #fff;
+  border-radius: 0.3125rem;
+  padding: 0.3125rem;
+  background-color: rgb(252, 244, 224);
+}
+.toast-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border: 1px dotted #fccc6e;
+}
+.toast-picture {
+  position: absolute;
+  top: -6.5rem;
+  left: -1.5rem;
+  width: 18.75rem;
+  height: 8.5625rem;
+}
+.toast-pictrue-change {
+  position: absolute;
+  top: -1.5rem;
+  left: -1.375rem;
+  width: 17.5rem;
+  height: 3.125rem;
+}
+.toast-title {
+  padding: 2.8125rem 0;
+  font-size: 18px;
+  color: #fc7939;
+  text-align: center;
+}
+.toast-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.9375rem;
+}
+.toast-btn div {
+  background-color: #4A1AEB;
+  width: 4.6875rem;
+  height: 1.875rem;
+  border-radius: 1.875rem;
+  text-align: center;
+  line-height: 1.875rem;
+  color: #fff;
+}
+.close {
+  position: absolute;
+  top: -0.9375rem;
+  right: -0.9375rem;
+  width: 2rem;
+  height: 2rem;
+  background: url("../assets/img/close_store.png") no-repeat center top;
+  background-size: 100%;
+}
+.top-box {
+  height: 2rem;
+  line-height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rule {
+  height: 0.5rem;
+  line-height: 0.5rem;
+  padding: 0.3rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-family: PingFangSC-Medium;
+  font-size: 12px;
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+}
+.rule a {
+  color: #FFFFFF;
+}
